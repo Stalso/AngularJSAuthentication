@@ -1,0 +1,13 @@
+﻿<form class="form-login" role="form">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <h2 class="form-login-heading">Login</h2>
+            <input type="text" class="form-control" placeholder="Username" ng-model="controller.loginData.userName" required autofocus>
+            <input type="password" class="form-control" placeholder="Password" ng-model="controller.loginData.password" required>
+            <button class="btn btn-lg btn-info btn-block" type="submit" ng-click="controller.login()">Login</button>
+            <div ng-hide="controller.message == ''" class="alert alert-danger">
+                {{controller.message}}
+            </div>
+        </div>
+    </div>
+</form>

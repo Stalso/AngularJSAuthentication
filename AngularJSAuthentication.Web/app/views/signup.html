@@ -1,0 +1,22 @@
+﻿<form class="form-login" role="form">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <div class="form-group">
+                <h2 class="form-login-heading">Sign up</h2>
+                </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" ng-model="controller.registration.userName" required autofocus>
+                </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" ng-model="controller.registration.password" required>
+                </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" ng-model="controller.registration.confirmPassword" required>
+                </div>
+                <button class="btn btn-lg btn-info btn-block" type="submit" ng-click="controller.signUp()">Submit</button>
+                <div ng-hide="controller.message == ''" ng-class="(controller.savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                    {{controller.message}}
+                </div>
+            </div>
+        </div>
+</form>
