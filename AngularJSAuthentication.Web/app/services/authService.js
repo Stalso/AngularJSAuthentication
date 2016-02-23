@@ -19,7 +19,7 @@
             });
 
         };
-        var _login = function (loginData) {
+           var _login = function (loginData) {
 
             var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
 
