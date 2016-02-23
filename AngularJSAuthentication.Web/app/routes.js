@@ -34,9 +34,23 @@
 
             $routeProvider.when("/orders", {
                 controller: "ordersController  as controller",
-                templateUrl: "/app/views/orders.html"
+                templateUrl: "/app/views/orders.html",
+                resolve: {
+                    orders: function (ordersService) {
+                        return ordersService.getOrders();
+                    }
+                }
             });
 
+            $routeProvider.when("/refresh", {
+                controller: "refreshController as controller",
+                templateUrl: "/app/views/refresh.html"
+            });
+
+            $routeProvider.when("/tokens", {
+                controller: "tokensManagerController as controller",
+                templateUrl: "/app/views/tokens.html"
+            });
             $routeProvider.otherwise({ redirectTo: "/home" });
             $locationProvider.html5Mode(true);
 

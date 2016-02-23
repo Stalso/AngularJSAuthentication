@@ -5,6 +5,11 @@
             <input type="text" class="form-control" placeholder="Username" ng-model="controller.loginData.userName" required autofocus>
             <input type="password" class="form-control" placeholder="Password" ng-model="controller.loginData.password" required>
             <button class="btn btn-lg btn-info btn-block" type="submit" ng-click="controller.login()">Login</button>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="controller.loginData.useRefreshTokens"><strong> Use Refresh Tokens</strong>
+                </label>
+            </div>
             <div ng-hide="controller.message == ''" class="alert alert-danger">
                 {{controller.message}}
             </div>

@@ -5,7 +5,8 @@
             var vm = this;
             vm.loginData = {
                 userName: "",
-                password: ""
+                password: "",
+                useRefreshTokens: false
             };
 
             vm.message = "";

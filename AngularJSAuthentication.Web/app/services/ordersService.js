@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-    angular.module('OrdersServiceModule', []).factory('ordersService', ['$http', function ($http) {
+    angular.module('OrdersServiceModule', []).factory('ordersService', ['$http','$q', function ($http,$q) {
         var serviceBase = 'http://localhost:25103/';
         var ordersServiceFactory = {};
 
@@ -10,6 +10,7 @@
                 return results;
             }, function (error) {
                 console.log(error);
+                return $q.reject(error);
             });
         };
 

@@ -1,0 +1,42 @@
+﻿<div class="row">
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+    <div class="col-md-8">
+        <h3>List of Refresh Tokens ({{controller.refreshTokens.length}})</h3>
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Subject</th>
+                    <th>Client</th>
+                    <th>Issued At (UTC)</th>
+                    <th>Expires At (UTC)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="token in controller.refreshTokens">
+                    <td>
+                        <a ng-click="controller.deleteRefreshTokens($index,token.id)" href="">Remove</a>
+                    </td>
+                    <td>
+                        {{ controller.token.subject }}
+                    </td>
+                    <td>
+                        {{ controller.token.clientId }}
+                    </td>
+                    <td>
+                        {{ controller.token.issuedUtc | date:'medium' }}
+                    </td>
+                    <td>
+                        {{ controller.token.expiresUtc | date:'medium' }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+</div>

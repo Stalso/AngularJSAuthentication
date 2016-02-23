@@ -1,4 +1,4 @@
-﻿angular.module('AngularAuthApp', ['ngRoute', 'AuthInterceptor', 'routes', 'LocalStorageModule', 'angular-loading-bar', 'HomeCtrl', 'IndexCtrl', 'LoginCtrl', 'SighUpCtrl', 'OrdersCtrl', 'AuthServiceModule', 'OrdersServiceModule']).config(['$httpProvider', function ($httpProvider) {
+﻿angular.module('AngularAuthApp', ['ngRoute', 'AuthInterceptor', 'routes', 'LocalStorageModule', 'angular-loading-bar', 'HomeCtrl', 'IndexCtrl', 'LoginCtrl', 'SighUpCtrl', 'OrdersCtrl', 'TokensManagerCtrl', 'RefreshCtrl', 'AuthServiceModule', 'OrdersServiceModule', 'TokensManagerServiceModule']).config(['$httpProvider', function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
 }]);
 
